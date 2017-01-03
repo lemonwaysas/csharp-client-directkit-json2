@@ -28,3 +28,18 @@ The example is only the basic, you can play with our API by calling other servic
 
 * You can only call the LemonWay service from your server which has been whitelisted.
 * It is not the only way to access to our API, feel free to use your own library.
+
+# For Windows User
+## Update 2007-01-03
+- For some reason, dotnet Core for Linux is 1.1.0 but dotnet core for Windows is 1.0.3 So you will have to change the `project.json` to use 1.0.3 instead
+```
+"Microsoft.NETCore.App": {
+    "type": "platform",
+    "version": "1.0.3"
+}
+```
+- And then restore the `project.lock.json` which we didn't commit with:
+```
+dotnet restore
+```
+
