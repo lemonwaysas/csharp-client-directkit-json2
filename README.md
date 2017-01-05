@@ -5,6 +5,15 @@ This is a console application developed and tested on a Linux machine using the 
 It calls the [GetWalletDetails service](http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data)
 and display the details information of the wallet `sc`.
 
+It is a very basic application, to demonstrate how easy to access to the LemonWay service.
+
+
+>ASP.NET developer will interested in
+>
+>https://github.com/lemonwaysas/aspdotnet-client-directkit-json2
+>
+>There, you will also found the [`LemonWayService` library](https://github.com/lemonwaysas/aspdotnet-client-directkit-json2#lemonwayservice-project-library) - a more advance `LwService` helper than the one use here
+
 # How to run
 
 1. Edit the `LwService.cs`. Put your `DIRECTKIT_URL` (json2), `LOGIN` and `PASSWORD`
