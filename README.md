@@ -5,14 +5,13 @@ This is a console application developed and tested on a Linux machine using the 
 It calls the [GetWalletDetails service](http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data)
 and display the details information of the wallet `sc`.
 
-It is a very basic application, to demonstrate how easy to access to the LemonWay service.
+It is a very basic application, to demonstrate how easy to access to the LemonWay service. However, in real project you should use the [`LemonWayService` library](https://github.com/lemonwaysas/aspdotnet-client-directkit-json2/tree/master/src/LemonWayService)
 
-
->ASP.NET developer will interested in
+>ASP.NET MVC developer might interested in
 >
 >https://github.com/lemonwaysas/aspdotnet-client-directkit-json2
 >
->There, you will also found the [`LemonWayService` library](https://github.com/lemonwaysas/aspdotnet-client-directkit-json2#lemonwayservice-project-library) - a more advance `LwService` helper than the one use here
+>There, you will also find the [`LemonWayService` library](https://github.com/lemonwaysas/aspdotnet-client-directkit-json2#lemonwayservice-project-library) - a more advance `LwService` helper than the one used here.
 
 # How to run
 
@@ -51,4 +50,3 @@ The example is only the basic, you can play with our API by calling other servic
 ```
 dotnet restore
 ```
-
