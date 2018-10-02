@@ -15,7 +15,7 @@ namespace com.lemonway.tutorial {
 		1) Your directkit URL is sent to you by our Operation team.
 		2) In order to run the tutorial, you have to ask the Operation team to whitelist your machine's IP address first. Otherwise, you cannot call any service.
 		*/
-		private static readonly string DIRECTKIT_URL = "https://sandbox-api.lemonway.fr/mb/test001atos/dev/directkitjson2/Service.asmx";
+		private static readonly string DIRECTKIT_URL = "https://sandbox-api.lemonway.fr/mb/demo/dev/directkitjson2/Service.asmx";
 
 		/*
 		The login and password is configurable from the Lemonway backoffice (see your onboarding e-mail)
