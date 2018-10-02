@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace com.lemonway.tutorial {
 	public class Program {
@@ -20,6 +21,26 @@ namespace com.lemonway.tutorial {
 				return;
 			}
 			Console.WriteLine ("GetWalletDetails success. The wallet info is: ");
+			Console.WriteLine (response);
+		}
+
+		public static void UploadFileExample () {
+			const string walletExtId = "8888";
+
+			var request = LwService.CreateEmptyRequest ();
+			request.Set ("wallet", walletExtId);
+			request.Set ("fileName", "logo.jpg");
+			request.Set ("type", "4");
+			request.Set ("buffer", System.Convert.ToBase64String (File.ReadAllBytes ("./test.jpg")));
+			var response = LwService.Call ("UploadFile", request).d;
+
+			//check if the UploadFile service return error
+			var err = response["E"];
+			if (err.HasValues) {
+				Console.Error.WriteLine ($"UploadFile failed: error {err["Code"]} - {err["Msg"]}");
+				return;
+			}
+			Console.WriteLine ("UploadFile success: ");
 			Console.WriteLine (response);
 		}
 
