@@ -1,44 +1,36 @@
 ﻿using System;
 
-namespace com.lemonway.tutorial
-{
-	public class Program
-	{
+namespace com.lemonway.tutorial {
+	public class Program {
 		/*
 		This example call the GetWalletDetails service to display the wallet information
 		http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data
 		*/
-		public static void Example001() 
-		{
+		public static void GetWalletDetailsExample () {
 			const string walletExtId = "sc";
 
-			var request = LwService.CreateEmptyRequest();
-			request.Set("wallet", walletExtId);
-			var response = LwService.Call("GetWalletDetails", request).d;
+			var request = LwService.CreateEmptyRequest ();
+			request.Set ("wallet", walletExtId);
+			var response = LwService.Call ("GetWalletDetails", request).d;
 
 			//check if the GetWalletDetails service return error
 			var err = response["E"];
-			if (err.HasValues) 
-			{
-				Console.Error.WriteLine($"GetWalletDetails failed: error {err["Code"]} - {err["Msg"]}");
+			if (err.HasValues) {
+				Console.Error.WriteLine ($"GetWalletDetails failed: error {err["Code"]} - {err["Msg"]}");
 				return;
 			}
-			Console.WriteLine("GetWalletDetails success. The wallet info is: ");
-			Console.WriteLine(response);
+			Console.WriteLine ("GetWalletDetails success. The wallet info is: ");
+			Console.WriteLine (response);
 		}
 
-		public static void Main(string[] args)
-		{	
-			Console.WriteLine("---- Application start -----------");
-			try 
-			{
-				Example001();
+		public static void Main (string[] args) {
+			Console.WriteLine ("---- Application start -----------");
+			try {
+				GetWalletDetailsExample ();
+			} catch (Exception ex) {
+				Console.WriteLine (ex);
 			}
-			catch (Exception ex) 
-			{
-				Console.WriteLine(ex);
-			}
-			Console.WriteLine("---- Application end -------------");
+			Console.WriteLine ("---- Application end -------------");
 		}
 	}
 }
