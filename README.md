@@ -1,3 +1,5 @@
+⚠️WARNING: This client is deprecated⚠️ 
+
 # LemonWay [.NET Core](https://www.microsoft.com/net/core) tutorial
 
 This is a console application developed and tested on a Linux machine using the [.NET Core platform](https://www.microsoft.com/net/core).
